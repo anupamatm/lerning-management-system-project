@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7=@l93i2wx&*k_$)#(h!$=ym#c(u7&d+e_a+w8lx6#o-k!k$lk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'student',
     'lms_admin',
     'course',
+    'corsheaders'
+    
 ]
 
 
@@ -54,12 +56,15 @@ AUTH_USER_MODEL = 'authentication.CustomUser'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS=True
 
 ROOT_URLCONF = 'learning_mngt_system.urls'
 

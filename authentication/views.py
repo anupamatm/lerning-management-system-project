@@ -15,8 +15,8 @@ def get_tokens_for_user(user):
     return {
         'refresh': str(refresh),
         'access': str(refresh.access_token),
+        'user_type': user.user_type,  # Ensure this is correctly accessing the user_type attribute
     }
-
 
 @api_view(['POST'])
 def admin_login(request):
