@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'teacher',
     'student',
     'lms_admin',
+    'course',
 ]
 
 

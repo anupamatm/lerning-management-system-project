@@ -17,6 +17,7 @@ def get_tokens_for_user(user):
         'access': str(refresh.access_token),
     }
 
+
 @api_view(['POST'])
 def admin_login(request):
     """
